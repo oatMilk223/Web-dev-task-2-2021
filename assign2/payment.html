@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/sass.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<!--google font import-->
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manuale&family=Shippori+Mincho:wght@400;700&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+    <title>Tabby</title>
+    <!--free to use ico file for top of site, tutorial from: https://www.hostinger.com/tutorials/how-to-add-favicon-to-website-->
+    <!-- ico file from: https://icon-icons.com/icon/tablet-smiley-face/102285-->
+    <link rel="shortcut icon" type="image/ico" href="images/faveicon.ico"/>
+        <!--javascript here-->
+        <script src="scripts/payment.js"></script>
+</head>
+<body>
+    <header>
+  <h1>Tabby</h1>
+  <nav><ul> <!--nav used in each page, active class on the active page so that it can be altered in css-->
+    <li><a id="Enhancements" href="enhancements.html">Enhancements</a></li>
+    <li><a id="Enquiry" href="enquire.html">Enquiry</a></li>
+    <li><a id="Description" href="product.html">Description</a></li>
+    <li><a id="About" href="about.html">About</a></li>
+    <li><a id="Home" href="index.html">Home</a></li>
+  </ul></nav></header>
+  <div id="paymentPage">
+    <h2>Payment Details</h2>
+  <!--CUSTOMER DETAILS-->
+<section>
+    <h3>Customer Details</h3>
+
+    <p>First name: <span id="confirmFirstName"></span></p>
+    <p>Last name: <span id="confirmLastName"></span></p>
+    <p>Email address: <span id="confirmEmailAddress"></span></p>
+    <p>Street address: <span id="confirmStreetAddress"></span></p>
+    <p>Suburb / Town: <span id="confirmSuburbTown"></span></p>
+    <p>State: <span id="confirmState"></span></p>
+    <p>Postcode: <span id="confirmPostcode"></span></p>
+    <p>Phone number: <span id="confirmPhoneNumber"></span></p>
+    <p>Preffered contact: <span id="confirmPrefferedContact"></span></p>
+    <p>Product: <span id="confirmProduct"></span></p>
+    <p>Quantity: <span id="confirmQuantity"></span></p>
+    <p>Product features: <span id="confirmProductFeatures"></span></p>
+    <p>Any other comments: <span id="confirmComment"></span></p>
+ 
+</section>
+  <!--TOTAL PRICE OF PURCHASE-->
+  <section>
+<h3>Total Price</h3>
+<!--
+<p>You selected to buy <span id="confirmQuantity"></span> amount of <span id="confirmProduct"></span>(s).
+    The total cost is: $<span id="confirmProductCost"></span>.</p>
+-->
+<p id="totalPriceSection"></p>
+
+
+</section>
+  <!--FORM FOR CREDIT CARD DETAILS-->
+  <section>
+<h3>Payment Information</h3>
+<p>Please enter your payment details to complete the purchase:</p>
+
+<form id="paymentForm" action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+  <label for="creditCardType">Credit card type: </label>
+  <select name="creditCardType" id="creditCardType" required>
+      <option value="" selected="selected">Please select</option>
+      <option value="visa">Visa</option>
+      <option value="mastercard">Mastercard</option>
+      <option value="americanExpress">American Express</option>
+  </select> 
+  <br> <br>
+  <label for="creditName">Name on credit card: </label> 
+  <!--pattern from: https://stackoverflow.com/questions/9289451/regular-expression-for-alphabets-with-spaces-->
+  <input type="text" name="creditName" id="creditName" maxlength="40" pattern="[a-zA-Z][a-zA-Z ]+" required > <br>
+  
+  <label for="creditNumber">Credit card number: </label> 
+  <input type="number" name="creditNumber" id="creditNumber" required> <br>
+  
+  <label for="expiryDate">Credit card expiration date: </label>
+  <input type="date" name="expiryDate" id="expiryDate" required> <br>
+  
+  <label for="CVV">Card verfication value (CVV): </label> 
+  <input type="text" name="CVV" id="CVV" minlength="3" maxlength="3" required> <br>
+  
+  <button type="button" id="removeAll">Reset all input</button>
+  <button type="reset" value="reset">Reset card input</button>
+  <button type="submit" id="submit">Checkout</button>
+  
+  </form>
+  
+  
+
+</section>  </div>
+<footer>
+    <h3>Links</h3>
+    <hr>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/brooke-johnson-8ab0061a2/" class="other_links">LinkedIn</a></li>
+    <li><a href="https://github.com/chookadee" class="other_links">Github</a></li>
+    <li><a href="https://stackoverflow.com/users/13552489/brooke-johnson" class="other_links">Stackoverflow</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100005183865112" class="other_links">Facebook</a></li>
+  </ul>
+  <hr>
+  
+  <p>&#169; Website by Brooke Johnson, s102968951</p>
+  
+  </footer>
+</body>
+</html>

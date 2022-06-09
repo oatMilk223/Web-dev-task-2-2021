@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<!--google font import-->
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manuale&family=Shippori+Mincho:wght@400;700&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+    <title>Tabby</title>
+    <!--free to use ico file for top of site, tutorial from: https://www.hostinger.com/tutorials/how-to-add-favicon-to-website-->
+    <!-- ico file from: https://icon-icons.com/icon/tablet-smiley-face/102285-->
+    <link rel="shortcut icon" type="image/ico" href="images/faveicon.ico"/>
+        <!--javascript here-->
+        <script src="scripts/part2.js"></script>
+</head>
+<body>
+  <header>
+<h1>Tabby</h1>
+<nav><ul> <!--nav used in each page, active class on the active page so that it can be altered in css-->
+  <li><a id="Enhancements" class="active" href="enhancements.html">Enhancements</a></li>
+  <li><a id="Enquiry" href="enquire.html">Enquiry</a></li>
+  <li><a id="Description" href="product.html">Description</a></li>
+  <li><a id="About" href="about.html">About</a></li>
+  <li><a id="Home" href="index.html">Home</a></li>
+</ul></nav></header>
+<div class="content" id="top"><!--different content for each page as specified-->
+
+<!--aria lable used for background image-->
+  <section class="enhancements" aria-label="background of desk with tablet">
+    <div id="enh_id" ><h2>Enhancements</h2></div>
+<section class="f1">
+  <h3>Using SASS for implementation and management of CSS:</h3>
+
+<h4>Description:</h4>
+<p>SASS is a preprossecor language that is used for better creation and management of CSS files. For this 
+  assessment/website, I learned SASS so that I could more easily stylize my HTML files, with use of nesting, variables, 
+  and inheritance.</p>
+
+<h4>How it goes beyond the basic requirements of the assessment, and where it has been applied:</h4>
+<p>The basic styling requirements of the assessment didn't mention the need for any other languages besides CSS and HTML.
+   With the use of SASS (which was allowed), I was able to format IDs, classes and elements in a more organised and creative manner. 
+   SASS not only displays my competency for CSS styling, but shows that I am able to enhance the styling suggested, and more in a practical
+    language which I was quick to acquire.
+</p>
+<p>
+  The general requirements of CSS included the appropriate use of ID, element, class, grouping, and contextual selectors. It also required that I utilise 
+  Psuedo-Selectors or elements. Specific design requirements of elements on certain pages were also mentioned. Whilst completing these, I used SASS to nest 
+  specific styling choices. The nesting allowed me to better visualise the required (and not-required) contextual selectors. Contextual examples include:
+</p>
+<ul>
+  <li>Changing the font colors using :nth-child(odd) and :nth-child(even) nested within a class specified for only the enhancements page.</li>
+  <li>Specifying the different background colours for the layla images using :nth-child() nested within the div element, nested within the layla class.</li>
+  <li>Styling unique features of ul, li and a only nested within the nav element (using nesting).</li>
+  <li>Detailed styling of cells in Swinburne timetable using certain tr:nth-child within a td:nth-child. This included background color and border radius.</li>
+</ul>
+<p>
+  I also used SASS to make my CSS less repetitive. Instead of repeating styling settings for different elements, I either created a variable at the start of the page
+  (which was also beneficial to change quickly), or used compounding/grouping(required). Although compounding required less lines I felt that using variables instead 
+  (or in conjunction with compounding) allowed me to save time in case I changed my mind on the design (such as the colour pallette or font-style). Examples of variable 
+  use which enhanced the managability of the css styling include:
+</p>
+<ul>
+  <li>Using variable colours at the start of the file in case they had to be changed.</li>
+  <li>Using variables for colours and border-radius settings within the compounding of td:nth-child tr:nth-child combos (with a , after a td and tr).</li>
+</ul>
+<p>Finally, I included the use of inheritance to extend already specified styling. Although similar to variable uses, inheritance allowed me to extend 
+  much more css styling from one element to another. Examples of inheritance include:
+</p>
+<ul>
+  <li>Extending the specifics of the active class onto li a:hover.</li>
+</ul>
+
+
+<h4>What code was needed for implementation:</h4>
+<p>code required for SASS required (after installing SASS on VSCode) to stylise in the sass.scss file as I would like to see in the .css file, only in 
+  the syntax and freedom SASS allowed. This included being able to use brackets after an element within brackets after the first element it was nested in (for contextual styling).
+  For inheritance uses the inclusion of CSS properties from one element to another required using @extend followed by the element who's properties I wished to extend (into whatever element).
+  When variables were used in conjunction with or instead of grouping (when necessary), they were done so by declaring their name (after a $), followed by : and whatever 
+  styling I wanted to use the variable for. One example of this was "$cle: #00cccc;", which was mentioned in elements by declaring "background-color: $cle;". 
+  This code is not only in the .scss file, but is also attached on the right (in pictures). 
+</p>
+<div>
+  <h5>Font colours change within :nth-child()s for enhancements page</h5>
+  <code>
+    .f1 {
+      background-color: $charcoal;
+      width: 700px;
+      padding: 20px;
+      margin: 20px 0px 20px 0px;
+      h4 {
+        font-size: large;
+      }
+      h3 {
+        font-size: xx-large;
+      }
+      &:nth-child(odd) {
+        background-color: $lemon;
+        border-radius: 0px 30px 30px 0px;
+        h3 {
+          color: $charcoal;
+          padding-bottom: 4px;
+        }
+        th:nth-child(odd) {
+          padding: 30px;
+        }
+      }
+      &:nth-child(even) {
+        border-radius: 30px 0px 0px 30px;
+        h2,
+        h3,
+        h4,
+        h5 {
+          color: $strawberry;
+        }
+        p {
+          color: $mauve;
+        }
+      }
+    }
+  </code>
+</div>
+<div>
+  <h5>Layla gallery code</h5>
+  <code>
+    .layla_gallery {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      flex-wrap: wrap;
+      section {
+        background: linear-gradient(40deg, $strawberry, $mauve, $white_grey);
+        padding: 20px;
+      }
+      h2,
+      p {
+        color: $charcoal;
+      }
+      div {
+        padding: 15px;
+        margin: 30px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+        &:nth-child(even) {
+          background-color: $light_pink;
+        }
+        &:nth-child(odd) {
+          background-color: $strawberry;
+        }
+      }
+      div,
+      img {
+        border-radius: 30px;
+      }
+    }
+  </code>
+</div>
+<div>
+  <h5>Nav style nested</h5>
+  <code>
+    nav {
+      ul {
+        list-style-type: none;
+      }
+      li {
+        display: inline;
+        float: right;
+        margin-right: 40px;
+        background-color: $white_grey;
+        padding: 20px 20px 40px 20px;
+      }
+      a {
+        color: $plum;
+        padding: 5px;
+      }
+    }
+  </code>
+</div>
+<div>
+  <h5>Nth:child() styling for border radius and color variables in timetable</h5>
+  <code>
+    td:nth-child(1),
+tr:nth-child(1) {
+  background-color: $light_pink;
+  border: 1px solid $charcoal;
+}
+tr:nth-child(2) {
+  border: 1px solid $charcoal;
+}
+td:nth-child(8) {
+  width: 200px;
+}
+/*below uses cells within timetable classes slots to give each class a background color from start to finish - got this from here: https://css-tricks.com/useful-nth-child-recipies/*/
+/*prog */
+tr:nth-child(4) td:nth-child(3),
+tr:nth-child(3) td:nth-child(3),
+tr:nth-child(5) td:nth-child(3),
+tr:nth-child(6) td:nth-child(3),
+tr:nth-child(8) td:nth-child(6),
+tr:nth-child(9) td:nth-child(6),
+tr:nth-child(10) td:nth-child(6),
+tr:nth-child(11) td:nth-child(6) {
+  background-color: $programming;
+}
+
+/*web */
+tr:nth-child(7) td:nth-child(2),
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(8) td:nth-child(2),
+tr:nth-child(9) td:nth-child(2),
+tr:nth-child(10) td:nth-child(4) {
+  background-color: $website;
+}
+
+/*representing a timetable clash by mixing colours*/
+tr:nth-child(11) td:nth-child(4) {
+  background-color: $clash;
+}
+/*network */
+tr:nth-child(13) td:nth-child(3),
+tr:nth-child(12) td:nth-child(3),
+tr:nth-child(14) td:nth-child(3),
+tr:nth-child(15) td:nth-child(3),
+tr:nth-child(16) td:nth-child(3),
+tr:nth-child(17) td:nth-child(3),
+tr:nth-child(20) td:nth-child(5),
+tr:nth-child(21) td:nth-child(5),
+tr:nth-child(22) td:nth-child(5),
+tr:nth-child(23) td:nth-child(5) {
+  background-color: $network;
+}
+/*cle */
+tr:nth-child(9) td:nth-child(5),
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(10) td:nth-child(5),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(12) td:nth-child(4) {
+  background-color: $cle;
+}
+
+/*using border-radius for certain childs: */
+tr:nth-child(12) td:nth-child(4),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(23) td:nth-child(5),
+tr:nth-child(17) td:nth-child(3),
+tr:nth-child(9) td:nth-child(2),
+tr:nth-child(11) td:nth-child(6),
+tr:nth-child(6) td:nth-child(3) {
+  border-radius: $left_br;
+}
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(20) td:nth-child(5),
+tr:nth-child(12) td:nth-child(3),
+tr:nth-child(10) td:nth-child(4),
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(8) td:nth-child(6),
+tr:nth-child(3) td:nth-child(3) {
+  border-radius: $right_br;
+}
+  </code>
+</div>
+<div>
+  <h5>Colour variables</h5>
+  <code>/*colour variables here*/
+    $white_grey: #e8e8e8;
+    $charcoal: #201d1f;
+    $white: white;
+    $light_pink: #f2cfd6;
+    $strong_txt_col: #e8e8e8;
+    $mauve: #f2cfd6;
+    $plum: #b9314f;
+    $light_mauve: #f2cfd6;
+    $strawberry: #dc7f91;
+    $eggshell_grey: antiquewhite;
+    $lemon: #dbd670;
+    $programming: #ccccff;
+    $website: #ff99cc;
+    $clash: #80b3cc;
+    $network: #cccc99;
+    $cle: #00cccc;
+    $valid_field: #bff2c6;
+    $invalid_field: #f2cfd6;
+    $nav_color: #161416;
+    </code>
+</div>
+<div>
+  <h5>Nth:child() for colours and border radius (a snippet)</h5>
+  <code>tr:nth-child(9) td:nth-child(5),
+    tr:nth-child(8) td:nth-child(5),
+    tr:nth-child(10) td:nth-child(5),
+    tr:nth-child(11) td:nth-child(5),
+    tr:nth-child(12) td:nth-child(4) {
+      background-color: $cle;
+    }
+    
+    /*using border-radius for certain childs: */
+    tr:nth-child(12) td:nth-child(4),
+    tr:nth-child(11) td:nth-child(5),
+    tr:nth-child(23) td:nth-child(5),
+    tr:nth-child(17) td:nth-child(3),
+    tr:nth-child(9) td:nth-child(2),
+    tr:nth-child(11) td:nth-child(6),
+    tr:nth-child(6) td:nth-child(3) {
+      border-radius: $left_br;
+    }</code>
+</div>
+<h4>Third parties cited for this enhancement feature:</h4>
+<ul>
+  <li><a href="https://www.creativebloq.com/web-design/what-is-sass-111517618#:~:text=Sass%20(which%20stands%20for%20'Syntactically,to%20create%20style%20sheets%20faster">Creative Bloq</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Zz6eOVaaelI&t=1043s">Youtube video</a></li>
+  <li><a href="https://www.youtube.com/watch?v=_a5j7KoflTs">Youtube video</a></li>
+</ul>
+
+<h4>Links to where this has been applied:</h4>
+<ol>
+  <li><a href="enhancements.html">Font colour change (on this page, where you're reading)</a></li>
+  <li><a href="about.html#layla">Layla gallery code</a></li>
+  <li><a href="product.html#top">Nav style nested vs others (You can view differences in product page's li)</a></li>
+  <li><a href="about.html#swin_timetable">Swinburne timetable cells</a></li>
+  <li><a href="index.html">Colour variables, this is also everywhere but can be viewed in index.html nicely</a></li>
+  <li><a href="about.html#swin_timetable">swinburne timetable cells, in regards to border-radius</a></li>
+</ol>
+
+<h4>Does it run on Firefox browser?</h4>
+<p>Yes :)</p>
+
+
+
+</section>
+<!--photo side for enhancement one-->
+<section class="f1">
+  <h3>Using SASS images:</h3>
+  <div class="second_box">
+    <img src="images/pic1.PNG" alt="Code of font colours change using odd and even nth-childs">
+    <img src="images/pic2.PNG" alt="Layla gallery code">
+    <img src="images/pic3.PNG" alt="Nested nav style code">
+    <img src="images/pic4.PNG" alt="Timetable code for border-radius and colour">
+    <img src="images/pic5.PNG" alt="Colour variable code">
+  </div>
+
+
+
+
+</section>
+<section class="f1">
+  <h3>Using Additional CSS Properties:</h3>
+  
+<h4>Description:</h4>
+<p>To extend the quality of the website's design and usability, I tried using additional CSS properties which were not extensively taught or explained in any 
+  of the lectures. This includes use of psuedo-elements and psuedo-classes. As a result of using additional properties, my website has become more responsive to
+  the user's experience, and also appears more detailed in design (and quality). </p>
+
+<h4>How it goes beyond the basic requirements of the assessment:</h4>
+<p>The basic requirements of CSS necessary briefly mention only using psuedo-classes and elements at least once, so I decided to incorporate those selectors 
+  extensively. This includes using selectors not mentioned in the lectures. Here are some of the following things I've incorporated:
+</p>
+<ul>
+  <li>Used psuedo-elements ::before and ::after nested with the H1 with a mixin called before_after to create a tablet shape.</li>
+  <li>Used ::before and ::after to create dividing lines between h5 in enhancements.</li>
+  <li>Used pseudo-class :hover for the images in about_sec class to lose their grayscale filter (when hovered over).</li>
+  <li>Mentioned tr:nth-child() td:nth-child() pairings to colour (and use border-radius for some)the childs of specific tds and trs within the table.</li>
+  <li>Used variable for background-color to change for input :valid (input &:valid) to colour input when info entered is viable to submit.</li>
+  <li>Used variable for background-color to change for input :invalid (input &:focus &:invalid), changes input background if data invalid (or focused on with no input).</li>
+  <li></li>
+</ul>
+
+<h4>What code was needed for implementation:</h4>
+<div>
+  <h5>Mixin for tablet shape</h5>
+  <code>
+    @mixin before_after {
+      content: "";
+      display: block;
+      background-color: $charcoal;
+      height: 20px;
+      width: 200px;
+    }
+    h1 {
+    font-size: 60px;
+    margin-left: 60px;
+    padding-top: 30px;
+    font: 1.2em $reg_font bold;
+    &::before {
+      border-radius: $right_br;
+    }
+    &::after {
+      margin-top: 3px;
+      border-radius: $left_br;
+    }
+    &::before,
+    &::after {
+      @include before_after();
+    }
+  }</code>
+</div>
+<div>
+  <h5>Dividing lines fo h5 in Enhancements</h5>
+  <code>
+    .f1 {
+      background-color: $charcoal;
+      width: 700px;
+      padding: 20px;
+      margin: 20px 0px 20px 0px;
+      h4 {
+        font-size: large;
+        &::before {
+          @include lines();
+        }
+      }
+      h3 {
+        font-size: xx-large;
+      }
+      &:nth-child(odd) {
+        background-color: $lemon;
+        border-radius: 0px 30px 30px 0px;
+        h3 {
+          color: $charcoal;
+          padding-bottom: 4px;
+        }
+        th:nth-child(odd) {
+          padding: 30px;
+        }
+      }
+      &:nth-child(even) {
+        border-radius: 30px 0px 0px 30px;
+        h2,
+        h3,
+        h4,
+        h5 {
+          color: $strawberry;
+        }
+        p {
+          color: $mauve;
+        }
+      }
+    }
+  </code>
+</div>
+<div>
+  <h5>Filter changes in about_sec</h5>
+  <code>
+    .about_sec {
+      background-color: $white_grey;
+      padding: 70px 70px 70px 270px;
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      flex-flow: column wrap;
+      align-items: baseline;
+      align-content: space-around;
+      img {
+        filter: grayscale(100%);
+        &:hover {
+          filter: none;
+        }
+      }
+    }
+  </code>
+</div>
+<div>
+  <h5>Using :nth-child for td and tr in timetable</h5>
+  <code>
+    tr:nth-child(9) td:nth-child(5),
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(10) td:nth-child(5),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(12) td:nth-child(4) {
+  background-color: $cle;
+}
+  </code>
+</div>
+<div>
+  <h5>Input:valid and Input &:focus &:invalid</h5>
+  <code>
+    input {
+      margin-bottom: 10px;
+      &:valid {
+        background-color: $valid_field;
+      }
+      &:focus {
+        &:invalid {
+          background-color: $invalid_field;
+        }
+      }
+    }
+  </code>
+</div>
+
+<h4>Third parties cited for this enhancement feature:</h4>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=zGiirUiWslI&t=217s">Youtube video</a></li>
+  <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3schools</a></li>
+  <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp">w3schools</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Mozilla for Developers</a></li>
+</ul>
+
+<h4>Where this has been applied in the website:</h4>
+<ol>
+  <li><a href="enhancements.html">Tablet shape can be viewed on any page, since it is beside h1 on the top of every page</a></li>
+  <li><a href="enhancements.html">Dividing feature is where you're reading now</a></li>
+  <li><a href="about.html#about_sec">For image filter :hover (pic of me has it)</a></li>
+  <li><a href="about.html#swin_timetable">For :nth-child() in table (in regards to tr and td)</a></li>
+  <li><a href="enquire.html">For :valid and :focus :invalid input changes (try entering data in input sections)</a></li>
+</ol>
+
+<h4>Does it run on Firefox browser?</h4>
+<p>Yes :)</p>
+
+</section>
+<!--photo side for enhancement two-->
+<section class="f1">
+  <h3>Psuedo-Selectors images:</h3>
+  <div class="second_box">
+    <img src="images/pic6.PNG" alt="mixin for tablet shape code">
+    <img src="images/pic7.PNG" alt="mixin for lines and before_after">
+    <img src="images/pic8.PNG" alt="lines from using ::before in h4 enhancements section code">
+    <img src="images/pic9.PNG" alt="grayscale filter dissapear when using :hover selector code">
+    <img src="images/pic10.PNG" alt="swinburne timetable code">
+    <img src="images/pic11.PNG" alt="valid and invalid on focus code for enquiry form code">
+  </div>
+
+
+
+</section>
+ </section>
+
+
+
+
+
+
+
+</div>
+
+<footer>
+  <h3>Links</h3>
+  <hr>
+<ul>
+  <li><a href="https://www.linkedin.com/in/brooke-johnson-8ab0061a2/" class="other_links">LinkedIn</a></li>
+  <li><a href="https://github.com/chookadee" class="other_links">Github</a></li>
+  <li><a href="https://stackoverflow.com/users/13552489/brooke-johnson" class="other_links">Stackoverflow</a></li>
+  <li><a href="https://www.facebook.com/profile.php?id=100005183865112" class="other_links">Facebook</a></li>
+</ul>
+<hr>
+
+<p>&#169; Website by Brooke Johnson, s102968951</p>
+
+</footer>
+</body>
+</html>

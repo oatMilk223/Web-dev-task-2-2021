@@ -1,0 +1,1012 @@
+/*colour variables here*/
+$white_grey: #e8e8e8;
+$charcoal: #201d1f;
+$white: white;
+$light_pink: #f2cfd6;
+$strong_txt_col: #e8e8e8;
+$mauve: #f2cfd6;
+$plum: #b9314f;
+$light_mauve: #f2cfd6;
+$strawberry: #dc7f91;
+$eggshell_grey: antiquewhite;
+$lemon: #dbd670;
+$programming: #ccccff;
+$website: #ff99cc;
+$clash: #80b3cc;
+$network: #cccc99;
+$cle: #00cccc;
+$valid_field: #bff2c6;
+$invalid_field: #f2cfd6;
+$nav_color: #161416;
+
+@mixin before_after {
+  content: "";
+  display: block;
+  background-color: $charcoal;
+  height: 20px;
+  width: 200px;
+}
+@mixin lines {
+  content: "";
+  display: block;
+  background: $strawberry;
+  margin: 10px 0 30px 0;
+  width: auto;
+  margin-right: 40px;
+  height: 5px;
+}
+/* text css variables */
+$bold: "Encode Sans Expanded", sans-serif;
+$reg_font: "Encode Sans Expanded", sans-serif;
+/*border radius variables*/
+$left_br: 0px 0px 20px 20px;
+$right_br: 20px 20px 0px 0px;
+/*added fonts and colours here so I can change them easily*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote,
+p,
+strong,
+em,
+li,
+a,
+dd,
+th,
+caption,
+legend,
+label,
+button,
+textarea,
+td {
+  font-family: $reg_font;
+}
+h1 {
+  font-size: 60px;
+  margin-left: 60px;
+  padding-top: 30px;
+  font: 1.2em $reg_font bold;
+  &::before {
+    border-radius: $right_br;
+  }
+  &::after {
+    margin-top: 3px;
+    border-radius: $left_br;
+  }
+  &::before,
+  &::after {
+    @include before_after();
+  }
+}
+h1,
+h2 {
+  color: $charcoal;
+}
+h2 {
+  font-size: 2em;
+  align-self: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: $white_grey;
+}
+h3 {
+  color: $light_pink;
+}
+p {
+  color: $white;
+}
+em {
+  color: $mauve;
+  font-weight: bold;
+}
+
+/* nav css */
+/*inheritance here for hover color*/
+a {
+  color: $plum;
+}
+.active {
+  color: $charcoal;
+}
+li a:hover {
+  @extend .active;
+}
+a:link {
+  text-decoration: none;
+}
+aside {
+  background-color: $mauve;
+  padding: 20px;
+  border: 1px solid $plum;
+  p {
+    @extend .active;
+  }
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+nav {
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+    background-color: $white_grey;
+    padding: 20px 20px 40px 20px;
+  }
+  a {
+    color: $plum;
+    padding: 5px;
+  }
+}
+/*HEADER NAV - not including the nav li*/
+header {
+  background-color: $white_grey;
+}
+/* CSS FOR PAGES CONTENT HERE */
+/*removes the space surrounding the page (yay)*/
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+/*smooth scroll property found from here: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2*/
+html {
+  scroll-behavior: smooth;
+}
+/*FLEX CSS - done here so i don't have to repeat flex over and over*/
+.about_sec,
+.swin_timetable,
+.resume,
+.enhancements,
+#enquiry_section,
+#reviews,
+#why_buy,
+#prod_head,
+.categoryOne {
+  display: flex;
+}
+#reviews {
+  .second_box {
+    display: flex;
+  }
+}
+.about_sec,
+.enhancements {
+  justify-content: center;
+}
+/* ABOUT.HTML CSS */
+/*about sections css - flexed about_sec in column wrap direction*/
+.about_sec {
+  background-color: $white_grey;
+  padding: 70px 70px 70px 270px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: baseline;
+  align-content: space-around;
+  img {
+    filter: grayscale(100%);
+    &:hover {
+      filter: none;
+    }
+  }
+  li {
+    display: inline;
+  }
+  a {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  h2 {
+    font-size: 2em;
+    color: $charcoal;
+  }
+  /*links in first section on about page css*/
+  .other_links {
+    background-color: $white_grey;
+    border: none;
+    color: $plum;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    font-size: 20px;
+    margin: 20px 0px 20px 0px;
+    float: left;
+    align-self: stretch;
+    &:hover {
+      background-color: $plum;
+      color: $strong_txt_col;
+    }
+  }
+}
+dl {
+  float: left;
+  align-self: center;
+  background-color: $light_pink;
+  padding: 20px 0px 50px 20px;
+  width: 400px;
+  margin: 10px 0px 10px 0px;
+  dt {
+    color: $charcoal;
+    padding-top: 20px;
+  }
+}
+/*IMG/FIGURE IN ABOUT SECTION*/
+figure img {
+  padding: 20px;
+  border-style: double;
+  float: right;
+  padding-top: 10px;
+}
+figcaption {
+  background-color: $charcoal;
+  margin-bottom: 30px;
+  padding-left: 60px;
+}
+
+/*OTHER SECTIONS*/
+.resume,
+.projects,
+.gallery,
+#featured_products,
+#why_buy,
+#reviews,
+.en_one,
+.en_two,
+.en_three,
+.en_four,
+.swin_timetable,
+.layla_gallery {
+  padding: 70px;
+  height: auto;
+}
+.swin_timetable {
+  background-color: $charcoal;
+  flex-flow: column wrap;
+  flex-basis: 100%;
+  align-items: center;
+  align-content: center;
+  caption,
+  h2 {
+    color: $strawberry;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+}
+#why_buy {
+  background-color: $charcoal;
+}
+.projects,
+#why_buy,
+.gallery,
+.layla_gallery {
+  padding-left: 200px;
+}
+.gallery {
+  background-color: $lemon;
+}
+#reviews,
+.layla_gallery {
+  background-color: $white_grey;
+}
+
+/*CSS FOR TABLE IN ABOUT.HTML HERE*/
+
+.resume {
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  justify-content: center;
+  background-color: $strawberry;
+  .res_det {
+    width: 600px;
+    margin: 20px;
+    background-color: $white_grey;
+    height: auto;
+    padding: 30px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    img {
+      border: 1px solid $plum;
+    }
+    li {
+      padding-bottom: 20px;
+    }
+    em,
+    h3 {
+      color: $plum;
+    }
+
+    em {
+      background-color: $light_pink;
+      width: 200px;
+    }
+  }
+  #res_title {
+    align-self: center;
+    h2 {
+      color: $charcoal;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+    flex-basis: 100%;
+    width: 100%;
+  }
+  a {
+    background-color: $charcoal;
+    float: right;
+    border-radius: 30px;
+    margin: 30px 20px 0px 0px;
+    padding: 10px;
+    color: $light_pink;
+  }
+}
+table {
+  background-color: $white_grey;
+  border-collapse: collapse;
+  border: 3px solid $charcoal;
+  width: 700px;
+  height: auto;
+  em {
+    color: $charcoal;
+  }
+}
+td {
+  padding: 15px;
+  width: 900px;
+}
+td:nth-child(1),
+tr:nth-child(1) {
+  background-color: $light_pink;
+  border: 1px solid $charcoal;
+}
+tr:nth-child(2) {
+  border: 1px solid $charcoal;
+}
+td:nth-child(8) {
+  width: 200px;
+}
+/*below uses cells within timetable classes slots to give each class a background color from start to finish - got this from here: https://css-tricks.com/useful-nth-child-recipies/*/
+/*prog */
+tr:nth-child(4) td:nth-child(3),
+tr:nth-child(3) td:nth-child(3),
+tr:nth-child(5) td:nth-child(3),
+tr:nth-child(6) td:nth-child(3),
+tr:nth-child(8) td:nth-child(6),
+tr:nth-child(9) td:nth-child(6),
+tr:nth-child(10) td:nth-child(6),
+tr:nth-child(11) td:nth-child(6) {
+  background-color: $programming;
+}
+
+/*web */
+tr:nth-child(7) td:nth-child(2),
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(8) td:nth-child(2),
+tr:nth-child(9) td:nth-child(2),
+tr:nth-child(10) td:nth-child(4) {
+  background-color: $website;
+}
+
+/*representing a timetable clash by mixing colours*/
+tr:nth-child(11) td:nth-child(4) {
+  background-color: $clash;
+}
+/*network */
+tr:nth-child(13) td:nth-child(3),
+tr:nth-child(12) td:nth-child(3),
+tr:nth-child(14) td:nth-child(3),
+tr:nth-child(15) td:nth-child(3),
+tr:nth-child(16) td:nth-child(3),
+tr:nth-child(17) td:nth-child(3),
+tr:nth-child(20) td:nth-child(5),
+tr:nth-child(21) td:nth-child(5),
+tr:nth-child(22) td:nth-child(5),
+tr:nth-child(23) td:nth-child(5) {
+  background-color: $network;
+}
+/*cle */
+tr:nth-child(9) td:nth-child(5),
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(10) td:nth-child(5),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(12) td:nth-child(4) {
+  background-color: $cle;
+}
+
+/*using border-radius for certain childs: */
+tr:nth-child(12) td:nth-child(4),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(23) td:nth-child(5),
+tr:nth-child(17) td:nth-child(3),
+tr:nth-child(9) td:nth-child(2),
+tr:nth-child(11) td:nth-child(6),
+tr:nth-child(6) td:nth-child(3) {
+  border-radius: $left_br;
+}
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(20) td:nth-child(5),
+tr:nth-child(12) td:nth-child(3),
+tr:nth-child(10) td:nth-child(4),
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(8) td:nth-child(6),
+tr:nth-child(3) td:nth-child(3) {
+  border-radius: $right_br;
+}
+.layla_gallery {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  section {
+    background: linear-gradient(40deg, $strawberry, $mauve, $white_grey);
+    padding: 20px;
+  }
+  h2,
+  p {
+    color: $charcoal;
+  }
+  div {
+    padding: 15px;
+    margin: 30px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    &:nth-child(even) {
+      background-color: $light_pink;
+    }
+    &:nth-child(odd) {
+      background-color: $strawberry;
+    }
+  }
+  div,
+  img {
+    border-radius: 30px;
+  }
+}
+/* ENHANCEMENTS.HTML CSS */
+.f1,
+.enhancements {
+  height: auto;
+}
+code {
+  font-family: $bold;
+}
+#home_img {
+  background: $white_grey url(../images/tablet_design.jpeg) no-repeat;
+}
+.enhancements {
+  background-color: $plum;
+  background-size: cover;
+  width: 100%;
+  flex-direction: row;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  p,
+  h2,
+  h3,
+  div {
+    margin: 20px;
+  }
+  li {
+    color: $strawberry;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  ol {
+    margin-left: 20px;
+  }
+  #enh_id {
+    flex-basis: 100%;
+    width: 400px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+.f1 {
+  background-color: $charcoal;
+  width: 700px;
+  padding: 20px;
+  margin: 20px 0px 20px 0px;
+  div {
+    background-color: $light_pink;
+    border-radius: 1px solid $plum;
+    padding: 10px;
+  }
+  h4 {
+    font-size: large;
+    &::before {
+      @include lines();
+    }
+  }
+  h3 {
+    font-size: xx-large;
+  }
+  &:nth-child(odd) {
+    background-color: $light_pink;
+    border-radius: 0px 30px 30px 0px;
+    img {
+      margin-bottom: 20px;
+    }
+    h3 {
+      color: $charcoal;
+      padding-bottom: 4px;
+    }
+    th:nth-child(odd) {
+      padding: 30px;
+    }
+  }
+  &:nth-child(even) {
+    border-radius: 30px 0px 0px 30px;
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $strawberry;
+    }
+    p {
+      color: $mauve;
+    }
+  }
+}
+dl {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+/* ENQUIRE.HTML CSS*/
+
+#enquiry_section {
+  background-color: $charcoal;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  form {
+    span {
+      color: $charcoal;
+      font-weight: bold;
+    }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: $strawberry;
+    height: 550px;
+    width: 600px;
+    padding: 50px;
+    padding-top: 30px;
+    margin-left: 10px;
+    fieldset {
+      background-color: $light_pink;
+      height: 200px;
+      width: 400px;
+      padding: 20px;
+      border: 4px solid $charcoal;
+      // makes pretty legend style
+      legend {
+        border: 1px solid $charcoal;
+        background-color: $white_grey;
+        padding: 10px;
+        border-radius: 30px;
+      }
+    }
+    input,
+    select,
+    textarea {
+      border: none;
+      padding: 8px;
+      background-color: $white_grey;
+      &:focus {
+        border: 1px solid $plum;
+        outline: none;
+      }
+    }
+    // used margin to align different text areas
+    #lastname,
+    #firstname {
+      margin-left: 27px;
+    }
+    #emailaddress,
+    #lastname,
+    #firstname,
+    #phonenumber {
+      width: 180px;
+    }
+    #suburb_town {
+      margin-left: 10px;
+    }
+    #feature_four {
+      margin-left: 28px;
+    }
+    select {
+      margin-bottom: 10px;
+    }
+    #quantity {
+      width: 50px;
+    }
+    width: 900px;
+    height: auto;
+    textarea {
+      margin: 10px;
+    }
+    label {
+      margin: 30px;
+    }
+    input {
+      margin-bottom: 10px;
+      &:valid {
+        background-color: $valid_field;
+      }
+      &:focus {
+        &:invalid {
+          background-color: $invalid_field;
+        }
+      }
+    }
+    // button configured
+    // so the comment label apears above
+    #cmt {
+      margin-right: 900px;
+    }
+  }
+}
+#form {
+  h2 {
+    margin-bottom: 40px;
+    color: $strawberry;
+  }
+}
+button {
+  background-color: $white_grey;
+  padding: 20px;
+  margin-left: 15px;
+  border: 1px solid $charcoal;
+  &:focus {
+    border: 1px solid $plum;
+    outline: none;
+    background-color: $mauve;
+  }
+}
+// got help with input borders from: https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome
+
+/* INDEX.HTML CSS*/
+/*help with text in img from: https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_hero*/
+/*added reviews to have relatively similar css as why_buy*/
+#reviews,
+#why_buy {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#why_buy {
+  li {
+    display: inline;
+  }
+  a {
+    margin-right: 10px;
+    padding: 10px;
+    color: $light_pink;
+  }
+  p,
+  h2 {
+    color: $strawberry;
+  }
+}
+#tablet,
+#tablet2 {
+  background-color: $strawberry;
+  padding: 20px;
+  height: 1px;
+  width: 500px;
+}
+#tablet {
+  border-radius: 30px 30px 0 0;
+}
+#tablet2 {
+  border-radius: 0 0 30px 30px;
+  margin-top: 10px;
+}
+
+#home_img {
+  height: 800px;
+  background-size: cover;
+  position: relative;
+  @extend .enhancements;
+}
+
+#img_text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white_grey;
+  &::after {
+    content: url(../images/fave_icon_small.png);
+  }
+  h2 {
+    font-size: 3em;
+    color: $plum;
+    background-color: $strawberry;
+    padding: 10px;
+  }
+}
+.pink_box {
+  padding: 20px;
+  width: 500px;
+}
+#featured_products {
+  background-color: $lemon;
+  height: auto;
+}
+#featured_products {
+  h2,
+  p {
+    color: $charcoal;
+    padding-left: 200px;
+    width: 900px;
+  }
+}
+.prod_gallery {
+  margin: 60px 0 0 100px;
+  display: inline-block;
+  padding: 10px;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: $white_grey;
+  .description {
+    padding: 10px 0 10px 0;
+    margin-left: 50px;
+    width: 200px;
+    a {
+      color: $plum;
+    }
+    h3 {
+      color: $charcoal;
+      width: 200px;
+    }
+  }
+}
+#reviews {
+  height: 1000px;
+  .second_box {
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  h2 {
+    padding: 10px;
+    border-radius: 30px;
+    color: $charcoal;
+    margin-left: 90px;
+  }
+  table {
+    border-spacing: 10px;
+    border-collapse: separate;
+    background-color: $white_grey;
+    width: 700px;
+    height: 500px;
+    border: none;
+    th {
+      background-color: $strawberry;
+      padding-right: 10px;
+      img {
+        filter: grayscale(100%);
+      }
+      img:hover {
+        filter: none;
+      }
+    }
+    th:nth-child(1) {
+      padding: 20px 40px 20px 40px;
+    }
+    th:nth-child(2) {
+      background-color: $white_grey;
+    }
+  }
+}
+
+/* PRODUCT.HTML CSS*/
+.categoryIntro {
+  background-color: $strawberry;
+}
+.categoryIntro,
+#brands {
+  height: auto;
+  width: fit-content;
+  margin: 30px;
+  border-radius: 30px;
+  padding: 30px;
+}
+#brands {
+  ul {
+    list-style-type: none;
+  }
+}
+#brands {
+  background-color: $charcoal;
+  h2 {
+    color: $strawberry;
+  }
+  li {
+    float: left;
+    margin: 30px;
+    padding: 10px;
+  }
+  a {
+    display: block;
+  }
+}
+#prod_head {
+  flex-direction: row;
+  justify-content: space-between;
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+.categoryOne,
+#prod_head {
+  background-color: $white_grey;
+}
+.categoryOne {
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  // margin bottom of 100px so when naviagting from product in index to product.html anchor it looks neater
+  ol {
+    margin-left: 20px;
+  }
+}
+.categoryIntro {
+  width: 700px;
+  p,
+  h2 {
+    color: $charcoal;
+  }
+  a {
+    color: $light_pink;
+  }
+}
+.product {
+  padding: 10px;
+  margin: 20px;
+  flex-basis: 10%;
+  aside {
+    width: 341.5px;
+  }
+  img {
+    border: 5px solid $charcoal;
+    /*https://www.w3schools.com/css/css3_shadows_box.asp -> box shadow help*/
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.3),
+      0 9px 30px 0 rgba(0, 0, 0, 0.2);
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+  h2 {
+    color: $charcoal;
+    margin-bottom: 20px;
+  }
+  table {
+    tr:nth-child(1) {
+      background-color: $charcoal;
+      th {
+        color: $light_pink;
+      }
+    }
+    th {
+      padding: 10px;
+      border: 1px solid $charcoal;
+    }
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+// help for centering hr tag from here: https://stackoverflow.com/questions/24749399/centering-an-hr-tag
+.bar {
+  background-color: $charcoal;
+  height: 20px;
+  width: auto;
+  border: none;
+  margin: 0 60px 0 60px;
+  border-radius: 30px;
+}
+body {
+  background-color: $white_grey;
+}
+h5 {
+  font-size: x-large;
+}
+h4,
+caption {
+  font-size: xx-large;
+}
+aside {
+  float: right;
+}
+/*END OF PAGES CONTENT CSS*/
+/* footer css */
+footer {
+  height: 200px;
+  background-color: $nav_color;
+  margin: 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  h3,
+  p {
+    color: $strawberry;
+  }
+  hr {
+    width: 150px;
+    height: 8px;
+    background-color: $strawberry;
+    border: none;
+  }
+  li {
+    padding: 10px;
+    width: 132px;
+    a {
+      color: $plum;
+    }
+  }
+}
+/*payment.html css*/
+#paymentPage {
+  background-color: $white_grey;
+  height: auto;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  h3 {
+    margin-bottom: 7px;
+    font-size: xx-large;
+  }
+  h2 {
+    color: $charcoal;
+    margin-bottom: 10px;
+  }
+  h3,
+  p {
+    color: $strawberry;
+  }
+  span {
+    color: $light_pink;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  section {
+    background-color: $charcoal;
+    height: auto;
+    width: 900px;
+    margin-bottom: 20px;
+    padding: 70px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  #paymentForm {
+    background-color: $lemon;
+    height: 200px;
+    padding: 100px;
+    display: inline-block;
+    input {
+      margin-bottom: 20px;
+      border: 0px;
+      height: 20px;
+    }
+    label {
+      margin-left: 10px;
+    }
+  }
+}
+// dropdown css

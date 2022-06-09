@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+<!--google font import-->
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manuale&family=Shippori+Mincho:wght@400;700&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+    <title>Tabby</title>
+    <!--free to use ico file for top of site, tutorial from: https://www.hostinger.com/tutorials/how-to-add-favicon-to-website-->
+    <!-- ico file from: https://icon-icons.com/icon/tablet-smiley-face/102285-->
+    <link rel="shortcut icon" type="image/ico" href="images/faveicon.ico"/>
+        <!--javascript here-->
+        <script src="scripts/part2.js"></script>
+        <script src="scripts/enhancements.js"></script>
+        <!--for home text-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+  <header>
+<h1>Tabby</h1>
+<nav><ul> <!--nav used in each page, active class on the active page so that it can be altered in css-->
+  
+  <li><a id="Enhancements" href="enhancements.html">Enhancements</a></li>
+  <li><a id="Enquiry" href="enquire.html">Enquiry</a></li>
+  <li><a id="Description" href="product.html">Description</a></li>
+  <li><a id="About" href="about.html">About</a></li>
+  <li><a id="Home" class="active" href="index.html">Home</a></li>
+  
+</ul></nav></header>
+<div class="content" id="top"><!--different content for each page as specified-->
+<div id="home_img">
+  <!--used aria-label for background image to be safe, found from: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute-->
+<section id="img_text" aria-label="background of desk with tablet, with heading in the middle" >
+  <h2 class="ml11">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters">Tablets. The Essential Office Tool</span>
+    </span>
+  </h2>
+</section>
+
+
+</div>
+<section id="why_buy">
+  <div class="pink_box"><div id="tablet"> </div><h2>Why Buy a Tablet?</h2><br>
+    <h3>Reliable</h3>
+  <p>With newer models introduced every year, tablets have proven to stand apart from pcs,
+    especially in terms of increasing durability standards. Some common features which showcase
+    this are increased speed, battery life and overall efficiency. If you own an old computer and 
+    would prefer a longer lasting, speedier (and compact) device, perhaps tablets are for you.
+  </p><br>
+
+       <h3>Sustainable</h3>
+       <p>Thanks to the increasing importance of sustainable business practices, many tablet companies
+         strive to maintain eco-friendly and ethical produce methods. As a result, reputable brands 
+         produce tablets which were made whilst taking consideration of the planet in mind. Newer additions
+         implemented in the hardware of tablets (as opposed to old pcs) consist of safer-to-dispose
+         materials which are much more eco-friendly.
+       </p><br>
+
+           <h3>Innovative</h3>
+           <p>The compact and efficient nature of tablets make them a popular product for consumers.
+             Because of increasing demand, many companies value creating innovation where it's appreciated.
+             Since the popular acceptance of tablets as every day devices, there has been a steep increase 
+             in innovative features  for the design of tablets. Every year new tablets are released for sale,
+             there is a clear distinction from how each version has improved over such a short time. If you are
+             hoping to obtain a product that increases its quality drastically, tablets are for you.
+           </p><br>
+       <ul>
+        <li><a href="#featured_products" class="other_links">Featured Products</a></li>
+        <li><a href="#reviews" class="other_links">Reviews</a></li>
+      </ul><div id="tablet2"> </div>
+      </div>
+        <img src="images/tablet_green_vert.jpeg" alt="Image of person holding a tablet">
+</section>
+<section id="featured_products">
+  <h2>Featured Products</h2>
+  <p>Below are some of our most popular tablet models, created by our favourite, 
+    most trusted brands. We have tested and reviewed each model we've come across 
+    for our customers, however what's most valued is the feedback we recieve. If you
+    have a product you feel deserves to be here, feel free to let us know by 
+    navigating to our <a href="enquiry.html">enquiry page</a>.
+  </p>
+
+       
+       <div class="prod_gallery">
+        <img src="images/lenovo_m10.jpg" alt="Lenovo m10 tablet">
+        <div class="description"><h3>Lenovo Tab M10 10.1" 32GB</h3>
+          <a href="product.html#lenovo_p" class="other_links">More Information</a></div>
+      </div>
+
+      <div class="prod_gallery">
+        <img src="images/Samsung_Galaxy_Tab.png" alt="Samsung Galaxy tablet">
+        <div class="description"><h3>Samsung Galaxy Tab A7 10.4"
+          Wi-Fi 64GB</h3>
+          <a href="product.html#samsung_g_a7" class="other_links">More Information</a></div> 
+          
+      </div>
+      <div class="prod_gallery">
+        <img src="images/Microsoft_Surface_Go.jpg" alt="Microsoft Surface pro tablet">
+        <div class="description"><h3>Microsoft Surface Go 2 64GB Wi-Fi</h3>
+          <a href="product.html#microsoft_sp" class="other_links">More Information</a></div>
+      </div>
+       
+    
+</section>
+<section id="reviews">
+  <h2>Some Of Our Many Positive Customer Reviews</h2>
+  <div class="second_box">
+  <table>
+    <tr>
+      <th><strong>Hayley: </strong><blockquote><q>My new XPS is amazing, and I couldn't have asked for better customer
+        service. My enquiry towards the product before buying it was quickly responded to. The product came quicker than 
+        expected, and now I use it everyday for my photography / art studio projects with my team. Thanks Tabby!
+      </q></blockquote></th>
+      <th><img src="images/person1.jfif" alt="Photo of Hayley who wrote the review"></th>
+    </tr>
+    <tr>
+      <th><strong>Josh: </strong><blockquote><q>I can't believe how great my tablet is, I bought the iPad pro and it's 100%
+        worth it! Pictures have never been so clear on any of my previous tablets. Now I can take this wherever I travel in 
+        case my camera fails me. Tabby is an amazing tablet store and I wouldn't recommend anywhere else!
+      </q></blockquote></th>
+         <th><img src="images/person2.jfif" alt="Photo of Josh who wrote the review"></th>
+    </tr>
+  </table>
+  
+</div>
+<p><a href="#top">Go to top page</a></p>
+</section>
+</div>
+<footer>
+    <h3>Links</h3>
+    <hr>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/brooke-johnson-8ab0061a2/" class="other_links">LinkedIn</a></li>
+    <li><a href="https://github.com/chookadee" class="other_links">Github</a></li>
+    <li><a href="https://stackoverflow.com/users/13552489/brooke-johnson" class="other_links">Stackoverflow</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100005183865112" class="other_links">Facebook</a></li>
+  </ul>
+<hr>
+
+  <p>&#169; Website by Brooke Johnson, s102968951</p>
+  
+</footer>
+</body>
+</html>

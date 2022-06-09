@@ -1,0 +1,1170 @@
+/*colour variables here*/
+/* text css variables */
+/*border radius variables*/
+/*added fonts and colours here so I can change them easily*/
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote,
+p,
+strong,
+em,
+li,
+a,
+dd,
+th,
+caption,
+legend,
+label,
+button,
+textarea,
+td {
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  margin-left: 60px;
+  padding-top: 30px;
+  font: 1.2em "Encode Sans Expanded", sans-serif bold;
+}
+
+h1::before {
+  border-radius: 20px 20px 0px 0px;
+}
+
+h1::after {
+  margin-top: 3px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  display: block;
+  background-color: #201d1f;
+  height: 20px;
+  width: 200px;
+}
+
+h1,
+h2 {
+  color: #201d1f;
+}
+
+h2 {
+  font-size: 2em;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #e8e8e8;
+}
+
+h3 {
+  color: #f2cfd6;
+}
+
+p {
+  color: white;
+}
+
+em {
+  color: #f2cfd6;
+  font-weight: bold;
+}
+
+/* nav css */
+/*inheritance here for hover color*/
+a {
+  color: #b9314f;
+}
+
+.active,
+li a:hover,
+aside p {
+  color: #201d1f;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+aside {
+  background-color: #f2cfd6;
+  padding: 20px;
+  border: 1px solid #b9314f;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  float: right;
+  margin-right: 40px;
+  background-color: #e8e8e8;
+  padding: 20px 20px 40px 20px;
+}
+
+nav a {
+  color: #b9314f;
+  padding: 5px;
+}
+
+/*HEADER NAV - not including the nav li*/
+header {
+  background-color: #e8e8e8;
+}
+
+/* CSS FOR PAGES CONTENT HERE */
+/*removes the space surrounding the page (yay)*/
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*smooth scroll property found from here: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*FLEX CSS - done here so i don't have to repeat flex over and over*/
+.about_sec,
+.swin_timetable,
+.resume,
+.enhancements,
+#home_img,
+#enquiry_section,
+#reviews,
+#why_buy,
+#prod_head,
+.categoryOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#reviews .second_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_sec,
+.enhancements,
+#home_img {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* ABOUT.HTML CSS */
+/*about sections css - flexed about_sec in column wrap direction*/
+.about_sec {
+  background-color: #e8e8e8;
+  padding: 70px 70px 70px 270px;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+  /*links in first section on about page css*/
+}
+
+.about_sec img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.about_sec img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.about_sec li {
+  display: inline;
+}
+
+.about_sec a {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.about_sec h2 {
+  font-size: 2em;
+  color: #201d1f;
+}
+
+.about_sec .other_links {
+  background-color: #e8e8e8;
+  border: none;
+  color: #b9314f;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  font-size: 20px;
+  margin: 20px 0px 20px 0px;
+  float: left;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+}
+
+.about_sec .other_links:hover {
+  background-color: #b9314f;
+  color: #e8e8e8;
+}
+
+dl {
+  float: left;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  background-color: #f2cfd6;
+  padding: 20px 0px 50px 20px;
+  width: 400px;
+  margin: 10px 0px 10px 0px;
+}
+
+dl dt {
+  color: #201d1f;
+  padding-top: 20px;
+}
+
+/*IMG/FIGURE IN ABOUT SECTION*/
+figure img {
+  padding: 20px;
+  border-style: double;
+  float: right;
+  padding-top: 10px;
+}
+
+figcaption {
+  background-color: #201d1f;
+  margin-bottom: 30px;
+  padding-left: 60px;
+}
+
+/*OTHER SECTIONS*/
+.resume,
+.projects,
+.gallery,
+#featured_products,
+#why_buy,
+#reviews,
+.en_one,
+.en_two,
+.en_three,
+.en_four,
+.swin_timetable,
+.layla_gallery {
+  padding: 70px;
+  height: auto;
+}
+
+.swin_timetable {
+  background-color: #201d1f;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.swin_timetable caption,
+.swin_timetable h2 {
+  color: #dc7f91;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+#why_buy {
+  background-color: #201d1f;
+}
+
+.projects,
+#why_buy,
+.gallery,
+.layla_gallery {
+  padding-left: 200px;
+}
+
+.gallery {
+  background-color: #dbd670;
+}
+
+#reviews,
+.layla_gallery {
+  background-color: #e8e8e8;
+}
+
+/*CSS FOR TABLE IN ABOUT.HTML HERE*/
+.resume {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #dc7f91;
+}
+
+.resume .res_det {
+  width: 600px;
+  margin: 20px;
+  background-color: #e8e8e8;
+  height: auto;
+  padding: 30px;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.resume .res_det img {
+  border: 1px solid #b9314f;
+}
+
+.resume .res_det li {
+  padding-bottom: 20px;
+}
+
+.resume .res_det em,
+.resume .res_det h3 {
+  color: #b9314f;
+}
+
+.resume .res_det em {
+  background-color: #f2cfd6;
+  width: 200px;
+}
+
+.resume #res_title {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.resume #res_title h2 {
+  color: #201d1f;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.resume a {
+  background-color: #201d1f;
+  float: right;
+  border-radius: 30px;
+  margin: 30px 20px 0px 0px;
+  padding: 10px;
+  color: #f2cfd6;
+}
+
+table {
+  background-color: #e8e8e8;
+  border-collapse: collapse;
+  border: 3px solid #201d1f;
+  width: 700px;
+  height: auto;
+}
+
+table em {
+  color: #201d1f;
+}
+
+td {
+  padding: 15px;
+  width: 900px;
+}
+
+td:nth-child(1),
+tr:nth-child(1) {
+  background-color: #f2cfd6;
+  border: 1px solid #201d1f;
+}
+
+tr:nth-child(2) {
+  border: 1px solid #201d1f;
+}
+
+td:nth-child(8) {
+  width: 200px;
+}
+
+/*below uses cells within timetable classes slots to give each class a background color from start to finish - got this from here: https://css-tricks.com/useful-nth-child-recipies/*/
+/*prog */
+tr:nth-child(4) td:nth-child(3),
+tr:nth-child(3) td:nth-child(3),
+tr:nth-child(5) td:nth-child(3),
+tr:nth-child(6) td:nth-child(3),
+tr:nth-child(8) td:nth-child(6),
+tr:nth-child(9) td:nth-child(6),
+tr:nth-child(10) td:nth-child(6),
+tr:nth-child(11) td:nth-child(6) {
+  background-color: #ccccff;
+}
+
+/*web */
+tr:nth-child(7) td:nth-child(2),
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(8) td:nth-child(2),
+tr:nth-child(9) td:nth-child(2),
+tr:nth-child(10) td:nth-child(4) {
+  background-color: #ff99cc;
+}
+
+/*representing a timetable clash by mixing colours*/
+tr:nth-child(11) td:nth-child(4) {
+  background-color: #80b3cc;
+}
+
+/*network */
+tr:nth-child(13) td:nth-child(3),
+tr:nth-child(12) td:nth-child(3),
+tr:nth-child(14) td:nth-child(3),
+tr:nth-child(15) td:nth-child(3),
+tr:nth-child(16) td:nth-child(3),
+tr:nth-child(17) td:nth-child(3),
+tr:nth-child(20) td:nth-child(5),
+tr:nth-child(21) td:nth-child(5),
+tr:nth-child(22) td:nth-child(5),
+tr:nth-child(23) td:nth-child(5) {
+  background-color: #cccc99;
+}
+
+/*cle */
+tr:nth-child(9) td:nth-child(5),
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(10) td:nth-child(5),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(12) td:nth-child(4) {
+  background-color: #00cccc;
+}
+
+/*using border-radius for certain childs: */
+tr:nth-child(12) td:nth-child(4),
+tr:nth-child(11) td:nth-child(5),
+tr:nth-child(23) td:nth-child(5),
+tr:nth-child(17) td:nth-child(3),
+tr:nth-child(9) td:nth-child(2),
+tr:nth-child(11) td:nth-child(6),
+tr:nth-child(6) td:nth-child(3) {
+  border-radius: 0px 0px 20px 20px;
+}
+
+tr:nth-child(8) td:nth-child(5),
+tr:nth-child(20) td:nth-child(5),
+tr:nth-child(12) td:nth-child(3),
+tr:nth-child(10) td:nth-child(4),
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(8) td:nth-child(6),
+tr:nth-child(3) td:nth-child(3) {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.layla_gallery {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.layla_gallery section {
+  background: linear-gradient(40deg, #dc7f91, #f2cfd6, #e8e8e8);
+  padding: 20px;
+}
+
+.layla_gallery h2,
+.layla_gallery p {
+  color: #201d1f;
+}
+
+.layla_gallery div {
+  padding: 15px;
+  margin: 30px;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.layla_gallery div:nth-child(even) {
+  background-color: #f2cfd6;
+}
+
+.layla_gallery div:nth-child(odd) {
+  background-color: #dc7f91;
+}
+
+.layla_gallery div,
+.layla_gallery img {
+  border-radius: 30px;
+}
+
+/* ENHANCEMENTS.HTML CSS */
+.f1,
+.enhancements,
+#home_img {
+  height: auto;
+}
+
+code {
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+#home_img {
+  background: #e8e8e8 url(../images/tablet_design.jpeg) no-repeat;
+}
+
+.enhancements,
+#home_img {
+  background-color: #b9314f;
+  background-size: cover;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.enhancements p,
+#home_img p,
+.enhancements h2,
+#home_img h2,
+.enhancements h3,
+#home_img h3,
+.enhancements div,
+#home_img div {
+  margin: 20px;
+}
+
+.enhancements li,
+#home_img li {
+  color: #dc7f91;
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.enhancements ol,
+#home_img ol {
+  margin-left: 20px;
+}
+
+.enhancements #enh_id,
+#home_img #enh_id {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  width: 400px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.f1 {
+  background-color: #201d1f;
+  width: 700px;
+  padding: 20px;
+  margin: 20px 0px 20px 0px;
+}
+
+.f1 div {
+  background-color: #f2cfd6;
+  padding: 10px;
+}
+
+.f1 h4 {
+  font-size: large;
+}
+
+.f1 h4::before {
+  content: "";
+  display: block;
+  background: #dc7f91;
+  margin: 10px 0 30px 0;
+  width: auto;
+  margin-right: 40px;
+  height: 5px;
+}
+
+.f1 h3 {
+  font-size: xx-large;
+}
+
+.f1:nth-child(odd) {
+  background-color: #f2cfd6;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.f1:nth-child(odd) img {
+  margin-bottom: 20px;
+}
+
+.f1:nth-child(odd) h3 {
+  color: #201d1f;
+  padding-bottom: 4px;
+}
+
+.f1:nth-child(odd) th:nth-child(odd) {
+  padding: 30px;
+}
+
+.f1:nth-child(even) {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.f1:nth-child(even) h2,
+.f1:nth-child(even) h3,
+.f1:nth-child(even) h4,
+.f1:nth-child(even) h5 {
+  color: #dc7f91;
+}
+
+.f1:nth-child(even) p {
+  color: #f2cfd6;
+}
+
+dl {
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* ENQUIRE.HTML CSS*/
+form {
+  background-color: #dc7f91;
+  height: 550px;
+  width: 600px;
+  padding: 50px;
+  padding-top: 30px;
+  margin-left: 10px;
+}
+
+form fieldset {
+  background-color: #f2cfd6;
+  height: 200px;
+  width: 400px;
+  padding: 20px;
+  border: 4px solid #201d1f;
+}
+
+form fieldset legend {
+  border: 1px solid #201d1f;
+  background-color: #e8e8e8;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+form input,
+form select,
+form textarea {
+  border: none;
+  padding: 7px;
+  background-color: #e8e8e8;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border: 1px solid #b9314f;
+  outline: none;
+}
+
+form #lastname,
+form #firstname {
+  margin-left: 27px;
+}
+
+form #emailaddress,
+form #lastname,
+form #firstname {
+  width: 180px;
+}
+
+form #suburb_town {
+  margin-left: 10px;
+}
+
+form #feature_four {
+  margin-left: 28px;
+}
+
+form select {
+  margin-bottom: 10px;
+}
+
+#enquiry_section {
+  background-color: #201d1f;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 0px 30px 0px;
+}
+
+#form h2 {
+  margin-bottom: 30px;
+  color: #dc7f91;
+}
+
+form {
+  width: 900px;
+  height: auto;
+  border-radius: 30px;
+}
+
+form textarea {
+  margin: 10px;
+}
+
+form label {
+  margin: 20px;
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+form input:valid {
+  background-color: #bff2c6;
+}
+
+form input:focus:invalid {
+  background-color: #f2cfd6;
+}
+
+form button {
+  background-color: #e8e8e8;
+  padding: 20px;
+  margin-left: 15px;
+  border: 1px solid #201d1f;
+}
+
+form button:focus {
+  border: 1px solid #b9314f;
+  outline: none;
+  background-color: #f2cfd6;
+}
+
+form #cmt {
+  margin-right: 900px;
+}
+
+/* INDEX.HTML CSS*/
+/*help with text in img from: https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_hero*/
+/*added reviews to have relatively similar css as why_buy*/
+#reviews,
+#why_buy {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#why_buy li {
+  display: inline;
+}
+
+#why_buy a {
+  margin-right: 10px;
+  padding: 10px;
+  color: #f2cfd6;
+}
+
+#why_buy p,
+#why_buy h2 {
+  color: #dc7f91;
+}
+
+#tablet,
+#tablet2 {
+  background-color: #dc7f91;
+  padding: 20px;
+  height: 1px;
+  width: 500px;
+}
+
+#tablet {
+  border-radius: 30px 30px 0 0;
+}
+
+#tablet2 {
+  border-radius: 0 0 30px 30px;
+  margin-top: 10px;
+}
+
+#home_img {
+  height: 800px;
+  background-size: cover;
+  position: relative;
+}
+
+#img_text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #e8e8e8;
+}
+
+#img_text::after {
+  content: url(../images/fave_icon_small.png);
+}
+
+#img_text h2 {
+  font-size: 3em;
+  color: #b9314f;
+  background-color: #dc7f91;
+  padding: 10px;
+}
+
+.pink_box {
+  padding: 20px;
+  width: 500px;
+}
+
+#featured_products {
+  background-color: #dbd670;
+  height: auto;
+}
+
+#featured_products h2,
+#featured_products p {
+  color: #201d1f;
+  padding-left: 200px;
+  width: 900px;
+}
+
+.prod_gallery {
+  margin: 60px 0 0 100px;
+  display: inline-block;
+  padding: 10px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #e8e8e8;
+}
+
+.prod_gallery .description {
+  padding: 10px 0 10px 0;
+  margin-left: 50px;
+  width: 200px;
+}
+
+.prod_gallery .description a {
+  color: #b9314f;
+}
+
+.prod_gallery .description h3 {
+  color: #201d1f;
+  width: 200px;
+}
+
+#reviews {
+  height: 1000px;
+}
+
+#reviews .second_box {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#reviews h2 {
+  padding: 10px;
+  border-radius: 30px;
+  color: #201d1f;
+  margin-left: 90px;
+}
+
+#reviews table {
+  border-spacing: 10px;
+  border-collapse: separate;
+  background-color: #e8e8e8;
+  width: 700px;
+  height: 500px;
+  border: none;
+}
+
+#reviews table th {
+  background-color: #dc7f91;
+  padding-right: 10px;
+}
+
+#reviews table th img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#reviews table th img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+#reviews table th:nth-child(1) {
+  padding: 20px 40px 20px 40px;
+}
+
+#reviews table th:nth-child(2) {
+  background-color: #e8e8e8;
+}
+
+/* PRODUCT.HTML CSS*/
+.categoryIntro {
+  background-color: #dc7f91;
+}
+
+.categoryIntro,
+#brands {
+  height: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+#brands ul {
+  list-style-type: none;
+}
+
+#brands {
+  background-color: #201d1f;
+}
+
+#brands h2 {
+  color: #dc7f91;
+}
+
+#brands li {
+  float: left;
+  margin: 30px;
+  padding: 10px;
+}
+
+#brands a {
+  display: block;
+}
+
+#prod_head {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#prod_head h2 {
+  margin-bottom: 30px;
+}
+
+.categoryOne,
+#prod_head {
+  background-color: #e8e8e8;
+}
+
+.categoryOne {
+  height: auto;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 20px;
+  margin-bottom: 100px;
+}
+
+.categoryOne ol {
+  margin-left: 20px;
+}
+
+.categoryIntro {
+  width: 700px;
+}
+
+.categoryIntro p,
+.categoryIntro h2 {
+  color: #201d1f;
+}
+
+.categoryIntro a {
+  color: #f2cfd6;
+}
+
+.product {
+  padding: 10px;
+  margin: 20px;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+}
+
+.product aside {
+  width: 341.5px;
+}
+
+.product img {
+  border: 5px solid #201d1f;
+  /*https://www.w3schools.com/css/css3_shadows_box.asp -> box shadow help*/
+  -webkit-box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.3),
+    0 9px 30px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.3),
+    0 9px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product img:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.product h2 {
+  color: #201d1f;
+  margin-bottom: 20px;
+}
+
+.product table tr:nth-child(1) {
+  background-color: #201d1f;
+}
+
+.product table tr:nth-child(1) th {
+  color: #f2cfd6;
+}
+
+.product table th {
+  padding: 10px;
+  border: 1px solid #201d1f;
+}
+
+.product h4 {
+  margin-bottom: 10px;
+}
+
+.bar {
+  background-color: #201d1f;
+  height: 20px;
+  width: auto;
+  border: none;
+  margin: 0 60px 0 60px;
+  border-radius: 30px;
+}
+
+body {
+  background-color: #e8e8e8;
+}
+
+h5 {
+  font-size: x-large;
+}
+
+h4,
+caption {
+  font-size: xx-large;
+}
+
+aside {
+  float: right;
+}
+
+/*END OF PAGES CONTENT CSS*/
+/* footer css */
+footer {
+  height: 200px;
+  background-color: #161416;
+  margin: 0px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+footer h3,
+footer p {
+  color: #dc7f91;
+}
+
+footer hr {
+  width: 150px;
+  height: 8px;
+  background-color: #dc7f91;
+  border: none;
+}
+
+footer li {
+  padding: 10px;
+  width: 132px;
+}
+
+footer li a {
+  color: #b9314f;
+}
+/*# sourceMappingURL=sass.css.map */
